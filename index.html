@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDG 2: Zero Hunger </title>
+    <style>
+        /* General Styles */
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/har.jpeg'); /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+}
+        header {
+            background: #964003;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 26px;
+            font-weight: bold;
+        }
+        nav {
+            background: #54dcde;
+            padding: 12px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        section {
+            padding: 40px;
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        h2 {
+            color: #c21d90;
+            text-align: center;
+            font-size: 24px;
+        }
+        h3 {
+            color: #333;
+            font-size: 22px;
+        }
+        /* Problem and Solutions Section */
+        .content-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .content-container img {
+            width: 250px;
+            height: 150px;
+            border-radius: 10px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .content-container div {
+            flex: 1;
+        }
+        /* Slideshow Styles */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+        .slide {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            font-weight: bold;
+            padding: 20px;
+        }
+        .fade {
+            animation: fadeEffect 1s ease-in-out;
+        }
+        @keyframes fadeEffect {
+            from { opacity: 0.4; }
+            to { opacity: 1; }
+        }
+        footer {
+            text-align: center;
+            background: #ff6600;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        
+
+    </style>
+    <script>
+        function showPage(pageId) {
+            let sections = document.getElementsByTagName("section");
+            for (let i = 0; i < sections.length; i++) {
+                sections[i].style.display = "none";
+            }
+            document.getElementById(pageId).style.display = "block";
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            showPage('home'); // Show home by default
+        });
+        
+        let slideIndex = 0;
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000);
+        }
+
+        function showPage(pageId) {
+            let sections = document.getElementsByClassName("page");
+            for (let i = 0; i < sections.length; i++) {
+                sections[i].classList.remove("active");
+            }
+            document.getElementById(pageId).classList.add("active");
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            showSlides();
+            showPage('home');
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>SDG 2: Zero Hunger in karnataka, Andra Pradesh, Uttar Pradesh</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('problem')">Problem</a></li>
+            <li><a onclick="showPage('solutions')">Solutions</a></li>
+            <li><a onclick="showPage('about')">About Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="page active">
+        <h2>Welcome to SDG 2: Zero Hunger</h2>
+        <p>This webpage aims to raise awareness and provide solutions for addressing hunger around the world. SDG 2 focuses on achieving "Zero Hunger" by ensuring that everyone has access to nutritious food. Through this platform, we aim to educate and inspire action to eradicate hunger and promote sustainable food systems.</p>
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="images/hungry_bg.jpg" alt="Hunger Issues">
+                <div class="overlay">Millions suffer from hunger every day</div>
+            </div>
+            <div class="slide fade">
+                <img src="images/foodwaste_bg.jpeg" alt="Food Waste Crisis">
+                <div class="overlay">1/3rd of all food is wasted while people starve</div>
+            </div>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p><strong>Name:</strong> R. Harshitha Reddy</p>
+                <p><strong>Reg No:</strong> 21MIS1102</p>
+                <p><strong>Contact No:</strong> 7569523275</p>
+                <p><strong>Mail-id</strong> harshitha.rachapalli2021@vitstudent.ac.in</p>
+            </div>
+            <div class="contact-image">
+                <img src="images/harshitha.jpg." alt="R. Harshitha Reddy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="page">
+        <h2>The Hunger Problem</h2>
+        <p>The issue of hunger is not just about food scarcity; it is rooted in poverty, inequality, and lack of access to resources. Below are some of the key factors contributing to hunger:</p>
+        <div class="content-container">
+            <img src="images/poverty.jpg" alt="Poverty">
+            <div>
+                <h3>Poverty</h3>
+                <p>Poverty is one of the leading causes of hunger worldwide, affecting millions of people every day.
+                     Families living in poverty struggle to afford basic necessities, including nutritious food, 
+                     clean water, and proper healthcare. This lack of access to essential resources 
+                     creates a vicious cycle where poor health, malnutrition, and reduced productivity further deepen poverty.</p>
+            </div>
+        </div>
+        <div class="content-container">
+            <img src="images/foodwaste.jpg" alt="Food Waste">
+            <div>
+                <h3>Food Waste</h3>
+                <p>Food waste is a critical issue contributing to global hunger, as nearly one-third of all
+                     food produced is wasted, while millions of people suffer from food insecurity. 
+                     This wastage occurs at multiple stages of the food supply chain—from farms to processing plants,
+                      transportation, retail stores, and households. While surplus food is discarded, millions of people 
+                      struggle to access nutritious meals,
+                     highlighting the need for better food management and distribution systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="page">
+        <h2>Organizations Fighting Hunger</h2>
+        <p>Several organizations are actively working to address the hunger crisis. They are committed to providing food, 
+           promoting sustainable agriculture, and ensuring food security for all. Below are some key organizations and their contributions:</p>
+    
+        <div class="content-container">
+            <img src="images/ap.jpeg" alt="Akshaya Patra" onclick="window.open('https://www.akshayapatra.org/')">
+            <div>
+                <h3>Akshaya Patra</h3>
+                <p>The Akshaya Patra Foundation is one of the largest non-profit organizations in India working to
+                   eliminate hunger among school children. It operates the Mid-Day Meal Program, providing nutritious
+                   meals to millions of underprivileged children across the country. By ensuring that students receive
+                   at least one wholesome meal per day, Akshaya Patra helps improve school attendance, academic 
+                   performance, and overall health.</p>
+                <a href="https://www.akshayapatra.org/mid-day-meal" target="_blank">
+                    <p>Our Work</p>
+                </a>
+            </div>
+        </div>
+    
+        <div class="content-container">
+            <img src="images/wfpi.jpeg" alt="World Food Programme" onclick="window.location.href='index1.html';">
+            <div>
+                <h3>World Food Programme</h3>
+                <p>The World Food Programme (WFP) is the largest humanitarian organization dedicated to 
+                   ending world hunger by providing food aid and nutritional support to vulnerable populations. Operating in over 120 countries, 
+                   WFP plays a crucial role in responding to emergencies, supporting communities affected by wars, natural disasters, and economic crises.</p>
+            </div>
+        </div>
+    
+        <div class="content-container">
+            <img src="images/fibz.jpeg" alt="Feeding India" onclick="window.location.href='index2.html';">
+            <div>
+                <h3>Feeding India</h3>
+                <p>Feeding India, an initiative by Zomato, aims to fight hunger and food wastage by distributing surplus food 
+                   to underprivileged communities. The organization operates food recovery programs, community fridges, and 
+                   meal distribution campaigns across India, ensuring that excess food from restaurants, corporate offices, 
+                   and events reaches those in need.</p>
+                <a href="https://www.zomato.com/feedingindia" target="_blank">
+                    <p>Learn More</p>
+                </a>
+            </div>
+        </div>
+    
+        <div class="content-container">
+            <img  src="images/wfpi.jpeg" alt="Action Against Hunger" onclick="window.location.href='index3.html';">
+
+            <div>
+                <h3>Action Against Hunger</h3>
+                <p>Action Against Hunger is a global humanitarian organization that works to eradicate malnutrition and provide 
+                   food security, clean water, and health services to vulnerable populations. It operates in over 50 countries, 
+                   focusing on sustainable solutions to hunger through community-based nutrition programs, food aid, and emergency relief efforts.</p>
+                <a href="https://www.actionagainsthunger.org/" target="_blank">
+                    <p>Support Their Work</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a global initiative dedicated to the eradication of hunger, working tirelessly to 
+            ensure that no one is left behind when it comes to access to nutritious food. Our mission is not
+             only to provide immediate food relief but also to create lasting, sustainable solutions that tackle
+              the root causes of hunger and food insecurity. By partnering with local and global organizations,
+               governments, and communities, we aim to empower individuals and families, improve agricultural practices, 
+            and address the challenges of poverty, climate change, and food distribution</p>
+        <h3>Our Vision and Mission</h3>
+        <p>Our vision is a world free from hunger, where everyone has access to nutritious food.
+             We are committed to achieving Zero Hunger by 2030 through strategic partnerships with governments,
+             NGOs, and communities. Our mission focuses on sustainable solutions, including food aid,
+              better agriculture, and food education. We empower communities to fight poverty, malnutrition,
+               and food insecurity. By promoting innovation
+             and fair policies, we strive to create a hunger-free future for all.</p>
+        <h3>Our Team</h3>
+        <p>Our team is a dedicated group of nutritionists, researchers, policymakers, and volunteers committed to 
+            fighting hunger. We work together to develop sustainable food solutions and improve global food security. 
+            Our experts focus on nutrition, agriculture, and community outreach to create long-term impact.
+             Through collaborations with local and global organizations, we ensure food reaches those in need. 
+             Passion and innovation drive us to find effective solutions for hunger. Together, we strive for a world without hunger.</p>
+        
+        <h2>How You Can Help</h2>
+        <p>Your support is crucial in our mission to end hunger. Here’s how you can help:</p>
+        <ul>
+            <li><strong>Donate</strong> –Your contributions provide meals and essential resources for those in need. Even a small donation can help feed a child and support long-term hunger relief programs.</li>
+            <li><strong>Volunteer</strong> –  Get involved in local communities by assisting in food distribution and meal preparation. Your time and effort can directly impact families struggling with food insecurity.</li>
+            <li><strong>Spread Awareness</strong> – Share information about the importance of SDG 2: Zero Hunger through social media, blogs, and community events. Educating others can inspire collective action and policy changes to fight hunger.</li>
+        </ul>
+        
+        
+        <h2>What People Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <img src="images/testimonial1.jpeg" alt="Testimonial 1">
+                <p>"Thanks to the Zero Hunger initiative, my community has received not just food but also hope for
+                     a better tomorrow. The support has allowed us to focus on rebuilding our lives instead of worrying
+                      about where our next meal will come from. Through the meals provided, children are able to
+                       attend school regularly and focus on their studies. It has been a life-changing experience for
+                        so many families, and we are deeply grateful for the kindness
+                     and generosity of those behind this cause." - <strong>John Doe, Volunteer</strong></p>
+            </div>
+            <div class="testimonial">
+                <img src="images/testimonial2.jpeg" alt="Testimonial 2">
+                <p>"Through donations, we have been able to feed thousands of children,
+                     ensuring they don't go to bed hungry. The impact has been far-reaching,
+                      not only providing meals but also giving children the energy and strength to focus on their education. 
+                      These donations help create a healthier and more productive generation, breaking the cycle of poverty. 
+                      Knowing that my contribution is making a difference in the lives of children fills me with immense pride.
+                       It’s incredible to see the smiles on their faces,
+                     knowing that each meal brings hope for a brighter future."
+                  <strong>Jane Smith, Donor</strong></p>
+            </div>
+        </div>
+        
+    </section>
+
+    <footer>
+        <p>© R. HARSHITHA REDDY | Working Towards a Hunger-Free World</p>
+    </footer>
+</body>
+</html>
